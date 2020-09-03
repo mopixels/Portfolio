@@ -5,9 +5,15 @@ import { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
-import "../fonts/typography.css"
+import Eurostile from "../fonts/eurostile.woff"
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "Eurostile";
+    src: url(${Eurostile}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
   * {
     margin: 0;
     padding: 0;
