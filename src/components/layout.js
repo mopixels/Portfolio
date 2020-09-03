@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
-import "../css/typography.css"
+import "../fonts/typography.css"
 
 const GlobalStyle = createGlobalStyle`
   * {
