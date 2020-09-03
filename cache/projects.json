@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "name": "MTB Time",
+    "text": "Sample website, made with HTML and SASS",
+    "description": "",
+    "usedTools": "",
+    "link": "https://mopixels.github.io/MTB_Time",
+    "source": "",
+    "image": "images/.jpg",
+    "largeImage": "images/.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Addresser",
+    "text": "Front-end of the web application. Made with React and SASS",
+    "description": "",
+    "usedTools": "",
+    "link": "https://mopixels.github.io/addresser",
+    "source": "",
+    "image": "images/.jpg",
+    "largeImage": "images/.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Žemaičio žodis",
+    "text": "Android app built with React Native and Redux",
+    "description": "",
+    "usedTools": "",
+    "link": "https://play.google.com/store/apps/details?id=com.mopixels.zemaiciozodis",
+    "source": "",
+    "image": "images/.jpg",
+    "largeImage": "images/.jpg"
+  }
+]
