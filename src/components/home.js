@@ -1,7 +1,7 @@
 import React from "react"
 import Introduction from "./Introduction"
 import Person from "./person"
-import Wave from "./wave"
+import Wave from "./Wave"
 import styled from "styled-components"
 
 const HomeSection = styled.section`
