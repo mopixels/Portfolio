@@ -16,11 +16,21 @@ const StyledFooter = styled.footer`
   padding: 12rem 5rem 7rem 5rem;
   color: white;
 
-  h3 {
+  .inviteText{
+    padding-bottom: 2rem;
+    h3 {
     font-size: 4rem;
   }
   p {
     font-size: 1.8rem;
+  }
+}
+  .emailContainer{
+    p{
+      font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-size: 1.8rem;
+    }
   }
   .socialMedia {
     ul {
@@ -72,9 +82,12 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <div id="contact">
+      <div className="inviteText" id="contact">
         <h3>Get in touch</h3>
         <p>Say Hi or find me at:</p>
+      </div>
+      <div className="emailContainer">
+        <p>mr.modestasrimkus@gmail.com</p>
       </div>
       <div className="socialMedia">
         <ul>
