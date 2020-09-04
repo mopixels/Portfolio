@@ -33,7 +33,7 @@
 
 Modestas Rimkus - [@linkedin](https://www.linkedin.com/in/modestas-rimkus/) - mr.modestasrimkus@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://modestasrimkus.netlify.app](https://modestasrimkus.netlify.app)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
