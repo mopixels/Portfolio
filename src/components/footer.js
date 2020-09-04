@@ -16,20 +16,20 @@ const StyledFooter = styled.footer`
   padding: 12rem 5rem 7rem 5rem;
   color: white;
 
-  .inviteText{
+  .inviteText {
     padding-bottom: 2rem;
     h3 {
-    font-size: 4rem;
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
   }
-  p {
-    font-size: 1.8rem;
-  }
-}
-  .emailContainer{
-    p{
+  .emailContainer {
+    p {
       font-weight: 700;
-    letter-spacing: 0.1rem;
-    font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      font-size: 1.8rem;
     }
   }
   .socialMedia {
@@ -37,25 +37,24 @@ const StyledFooter = styled.footer`
       display: flex;
       flex-direction: row;
       list-style: none;
-      
+
       li {
         align-self: center;
         margin: 1rem;
-        transition: all .4s;
-        a{
-        display:inline-block;
-           color: white;
-           .socialIcon{
+        transition: all 0.4s;
+        a {
+          display: inline-block;
+          color: white;
+          .socialIcon {
             vertical-align: bottom;
-           }
+          }
         }
-        &:hover{
-            box-shadow: 0 1rem 2rem rgba(0,0,0, 0.4);
-            transform: translateY(-1.05rem) scale(1.1);
-            }
+        &:hover {
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+          transform: translateY(-1.05rem) scale(1.1);
+        }
         &:active {
-            transform: translateY(0px);
-        }
+          transform: translateY(0px);
         }
       }
     }
