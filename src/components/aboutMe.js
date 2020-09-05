@@ -1,11 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { mediaQueries } from "./utils/mediaQueries"
 
 const AboutMeStyled = styled.div`
   padding: 20rem 15rem;
   position: relative;
 
+  ${mediaQueries("md")`
+  padding: 20rem 10rem;
+  `};
+  ${mediaQueries("sm")`
+  padding: 20rem 3rem;
+  `};
   h2 {
     color: white;
     text-align: center;
@@ -66,7 +73,6 @@ const AboutMe = () => {
       resume: file(relativePath: { eq: "resume.pdf" }) {
         publicURL
         size
-        name
       }
     }
   `)

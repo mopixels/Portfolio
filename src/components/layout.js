@@ -2,10 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
-
+import Eurostile from "../fonts/eurostile.woff"
 import Header from "./header"
 import Footer from "./footer"
-import Eurostile from "../fonts/eurostile.woff"
+import { mediaQueries } from "./utils/mediaQueries"
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: inherit
   }
   *,
   *::before,
@@ -25,8 +26,18 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     box-sizing: border-box;
-    font-size: 62.5%;
-    /* 1rem = 10px, 10px/16px = 62.5% */
+    font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
+
+    ${mediaQueries("md")`
+      font-size: 50%;
+    `};
+    ${mediaQueries("lg")`
+      font-size: 56.25%;
+    `};
+   ${mediaQueries("xl")`
+    font-size: 75%;
+  `};
+    
   }
   body {
     font-family: "Eurostile", sans-serif;
@@ -57,10 +68,6 @@ const Layout = ({ children }) => {
     </>
   )
 }
-
-// if (typeof window !== "undefined") {
-//   require("smooth-scroll")('a[href*="#"]')
-// }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,47 +1,56 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import styled from "styled-components"
 import Modal from "react-modal"
 import Img from "gatsby-image"
-import Button from "./Button"
-
-import { FaChevronRight, FaGithub } from "react-icons/fa"
+import { FaChevronRight, FaGithub, FaTimes } from "react-icons/fa"
+import styled from "styled-components"
+import Button from "./utils/Button"
+import { mediaQueries } from "./utils/mediaQueries"
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: "transparent",
     border: "none",
+    background: "transparent",
     overflow: "visible",
-    maxWidth: "80vw",
+    borderRadius: "0",
+    padding: 0,
+    height: "max-content",
+    width: "max-content",
+    margin: "auto auto",
+    top: "2rem",
+    left: "2rem",
+    right: "2rem",
+    bottom: "2rem",
   },
+
   overlay: {
     backgroundColor: "rgba(255, 255, 255, 0.9)",
+    zIndex: 2,
   },
 }
 
 const StyledContent = styled.div`
   display: flex;
-  max-width: 80vw;
+  justify-content: center;
+  ${mediaQueries("md")`
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  `};
 
   .closeButton {
+    opacity: 1;
     position: fixed;
-    top: 0;
-    right: 0;
-
-    cursor: pointer;
-    &:hover {
-      color: #520171;
-    }
+    top: 2rem;
+    right: 2rem;
   }
   .imageContainer {
     position: relative;
+    align-self: center;
+    ${mediaQueries("md")`
+      padding-bottom: 1rem;
+      align-self: center;
+    `};
 
     .laptopImage {
       object-fit: contain;
@@ -55,6 +64,9 @@ const StyledContent = styled.div`
       align-self: flex-start;
       z-index: 1;
       margin-right: 3rem;
+      ${mediaQueries("md")`
+        margin-right: 0;
+      `};
     }
     .websiteImage {
       position: absolute;
@@ -75,6 +87,11 @@ const StyledContent = styled.div`
     padding-left: 1rem;
     align-self: center;
 
+    ${mediaQueries("md")`
+      min-width: 80vw;
+      padding-left: 0;
+    `};
+
     h2 {
       font-size: 3.5rem;
       text-align: center;
@@ -83,9 +100,15 @@ const StyledContent = styled.div`
     .descriptionText {
       font-size: 1.8rem;
       padding-bottom: 2rem;
+      ${mediaQueries("md")`
+        text-align: justify;
+      `};
     }
     .toolsContainer {
       padding-bottom: 5rem;
+      ${mediaQueries("md")`
+        padding-bottom: 2.5rem;
+      `};
     }
     h3 {
       font-size: 2rem;
@@ -100,11 +123,18 @@ const StyledContent = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      column-gap: 2rem;
 
       .button {
-        width: 40%;
         background: #520171;
         color: white;
+
+        ${mediaQueries("md")`
+          max-width: 40%;
+        `};
+        ${mediaQueries("sm")`
+          min-width: max-content;
+        `};
 
         .sourceIcon {
           margin-right: 1rem;
@@ -149,11 +179,14 @@ function ProjectModal({ portfolio }) {
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
+    document.documentElement.style.overflow = "hidden"
+    document.body.scroll = "no"
     subtitle.style.color = "#000"
   }
 
   function closeModal() {
+    document.documentElement.style.overflow = "scroll"
+    document.body.scroll = "yes"
     setIsOpen(false)
   }
 
@@ -171,6 +204,9 @@ function ProjectModal({ portfolio }) {
         contentLabel={project.title}
       >
         <StyledContent>
+          <div className="closeButton">
+            <FaTimes size={24} onClick={closeModal} />
+          </div>
           {project.type === "App" ? (
             <div className="imageContainer">
               <Img

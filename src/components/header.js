@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { FaUser, FaFileCode, FaPhone, FaChevronCircleUp } from "react-icons/fa"
+import { FaUser, FaFileCode, FaPhone } from "react-icons/fa"
+import { mediaQueries } from "./utils/mediaQueries"
 
 const StyledHeader = styled.header`
   background: #520171;
@@ -13,9 +14,16 @@ const NavStyles = styled.ul`
   margin: 0;
   padding: 0.6rem 1rem;
   list-style: none;
+  ${mediaQueries("sm")`
+    justify-content: center;
+    padding: 0.8rem;
+  `};
   li {
     margin: 0;
     padding: 0 1rem;
+    ${mediaQueries("sm")`
+      padding: 0;
+    `};
     a {
       font-size: 1.5rem;
       font-weight: 700;
@@ -23,10 +31,14 @@ const NavStyles = styled.ul`
       color: white;
       text-decoration: none;
       opacity: 1;
-      transition: 1s;
       position: relative;
       display: inline-block;
       transition: 0.3s;
+      ${mediaQueries("sm")`
+        font-size: 2.2rem;
+        padding: 0 1rem;
+      `};
+
       span {
         position: relative;
         display: inline-block;
@@ -38,12 +50,7 @@ const NavStyles = styled.ul`
         top: 10%;
         left: 35%;
       }
-      .arrowUp {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        z-index: 2;
-      }
+
       &:hover,
       &:focus {
         .end {
@@ -99,11 +106,6 @@ const Header = () => (
           <div className="hiddenIcon hiddenIcon-contact">
             <FaPhone />
           </div>
-        </AnchorLink>
-      </li>
-      <li>
-        <AnchorLink to="/#home" stripHash>
-          <FaChevronCircleUp size={24} className="arrowUp" />
         </AnchorLink>
       </li>
     </NavStyles>

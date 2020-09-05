@@ -1,10 +1,14 @@
 import React from "react"
-import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 import Project from "./Project"
+import { mediaQueries } from "./utils/mediaQueries"
 
 const ProjectsStyled = styled.div`
   padding: 0 10rem 40rem 10rem;
+  ${mediaQueries("sm")`
+    padding: 0 5rem 35rem 5rem;
+  `};
   h2 {
     color: white;
     text-align: center;
@@ -16,6 +20,12 @@ const ProjectsStyled = styled.div`
     grid-template: 1fr / repeat(3, 25vw);
     justify-content: center;
     gap: 1.8rem 1.8rem;
+
+    ${mediaQueries("md")`
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem 0;
+  `};
   }
 `
 
