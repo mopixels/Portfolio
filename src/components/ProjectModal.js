@@ -22,7 +22,6 @@ const customStyles = {
     right: "2rem",
     bottom: "2rem",
   },
-
   overlay: {
     backgroundColor: "rgba(255, 255, 255, 0.9)",
     zIndex: 2,
@@ -43,6 +42,10 @@ const StyledContent = styled.div`
     position: fixed;
     top: 2rem;
     right: 2rem;
+    cursor: pointer;
+    &:hover {
+      color: #520171;
+    }
   }
   .imageContainer {
     position: relative;
