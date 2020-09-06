@@ -3,6 +3,8 @@ module.exports = {
     title: `Front-end developer`,
     description: `Modestas Rimkus personal website`,
     author: `Modestas Rimkus`,
+    url: "https://modestasrimkus.netlify.app",
+    image: "/src/data/images/mr.png",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -32,7 +34,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-anchor-links",
       options: {
-        offset: -90,
+        offset: -100,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-segment-js`,
+      options: {
+        delayLoad: true,
+        delayLoadTime: 1000,
       },
     },
   ],
