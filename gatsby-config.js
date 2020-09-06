@@ -10,6 +10,16 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["src/data/images/mr.png"],
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,18 +27,17 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Modestas Rimkus personal website`,
         short_name: `MoPixels portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#520171`,
+        theme_color: `#520171`,
         display: `minimal-ui`,
         icon: `src/data/images/mr.png`,
+        cache_busting_mode: "none",
       },
     },
     {

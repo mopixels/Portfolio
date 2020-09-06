@@ -160,14 +160,14 @@ function ProjectModal({ portfolio }) {
     query {
       laptopImage: file(relativePath: { eq: "images/laptop.png" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
       phoneImage: file(relativePath: { eq: "images/phone.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -188,7 +188,7 @@ function ProjectModal({ portfolio }) {
   }
 
   function closeModal() {
-    document.documentElement.style.overflow = "scroll"
+    document.documentElement.style.overflow = "visible"
     document.body.scroll = "yes"
     setIsOpen(false)
   }

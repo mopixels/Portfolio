@@ -48,14 +48,14 @@ const Projects = () => {
                 source
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 400) {
+                    fluid {
                       ...GatsbyImageSharpFluid
                     }
                   }
                 }
                 imageSecond {
                   childImageSharp {
-                    fluid(maxWidth: 400) {
+                    fluid {
                       ...GatsbyImageSharpFluid
                     }
                   }
