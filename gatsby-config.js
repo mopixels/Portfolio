@@ -13,14 +13,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        workboxConfig: {
-          globPatterns: ["src/data/images/mr.png"],
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
