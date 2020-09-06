@@ -37,12 +37,5 @@ module.exports = {
         offset: -100,
       },
     },
-    {
-      resolve: `gatsby-plugin-segment-js`,
-      options: {
-        delayLoad: true,
-        delayLoadTime: 1000,
-      },
-    },
   ],
 }

@@ -160,14 +160,14 @@ function ProjectModal({ portfolio }) {
     query {
       laptopImage: file(relativePath: { eq: "images/laptop.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       phoneImage: file(relativePath: { eq: "images/phone.png" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }

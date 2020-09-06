@@ -26,7 +26,7 @@ const Person = () => {
     query {
       personImage: file(relativePath: { eq: "images/person.png" }) {
         childImageSharp {
-          fluid(quality: 50) {
+          fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
           }
         }

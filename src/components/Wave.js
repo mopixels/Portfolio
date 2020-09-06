@@ -29,7 +29,6 @@ const StyledContainer = styled.div`
   align-self: end;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
-
   .ocean {
     height: 10%;
     width: 100%;
@@ -38,7 +37,6 @@ const StyledContainer = styled.div`
     left: 0;
     background: #015871;
   }
-
   .wave {
     background: url(${waveImage}) repeat-x;
     position: absolute;
@@ -49,7 +47,6 @@ const StyledContainer = styled.div`
       infinite;
     transform: translate3d(0, 0, 0);
   }
-
   .wave:nth-of-type(2) {
     top: -58px;
     animation: ${waveAnimation} 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s
