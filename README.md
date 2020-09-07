@@ -8,7 +8,7 @@
   <h3 align="center">Modestas Rimkus Portfolio</h3>
 
   <p align="center">
-    This is my personal portfolio website. 
+    My personal portfolio website. 
     <br />
     <a href="https://github.com/mopixels/portfolio"><strong>Explore the docs »</strong></a>
     <br />
