@@ -16,7 +16,7 @@ const particlesOptions = {
       value: 3,
       random: true,
       anim: {
-        speed: 4,
+        speed: 1,
         size_min: 0.3,
       },
     },
