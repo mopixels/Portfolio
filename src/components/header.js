@@ -52,7 +52,7 @@ const NavStyles = styled.ul`
       }
 
       &:hover,
-      &:focus {
+      &:active {
         .end {
           transform: translate(-15px, 0px) rotateY(0.5turn);
           opacity: 0;
