@@ -7,7 +7,7 @@ import styled from "styled-components"
 const particlesOptions = {
   particles: {
     number: {
-      value: 60,
+      value: 30,
       density: {
         enable: true,
       },
