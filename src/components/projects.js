@@ -19,7 +19,7 @@ const ProjectsStyled = styled.div`
     display: grid;
     grid-template: 1fr / repeat(3, 25vw);
     justify-content: center;
-    gap: 1.8rem 1.8rem;
+    gap: 5.4rem 1.8rem;
 
     ${mediaQueries("md")`
     display: flex;

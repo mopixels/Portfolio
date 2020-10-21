@@ -5,14 +5,13 @@
     <img src="src/data/images/mr.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Modestas Rimkus Portfolio</h3>
+  <h3 align="center">Modestas Rimkus Portfolio website</h3>
 
   <p align="center">
-    My personal portfolio website. 
-    <br />
     <a href="https://github.com/mopixels/portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/mopixels/portfolio/issues">Report Bug</a>
+
   </p>
 </p>
 
@@ -23,15 +22,17 @@
 ### Built With
 
 - Gatsby
-- Graphql
 - React
+- Graphql
 - Styled components
 
 <!-- CONTACT -->
 
 ## Contact
 
-Modestas Rimkus - [@linkedin](https://www.linkedin.com/in/modestas-rimkus/) - mr.modestasrimkus@gmail.com
+mr.modestasrimkus@gmail.com
+<br/>
+[LinkedIn](https://www.linkedin.com/in/modestas-rimkus/)
 
 Project Link: [https://modestasrimkus.netlify.app](https://modestasrimkus.netlify.app)
 
