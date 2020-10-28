@@ -1,8 +1,8 @@
-import React from "react"
-import Particles from "react-particles-js"
-import AboutMe from "./aboutMe"
-import Projects from "./projects"
-import styled from "styled-components"
+import React from "react";
+import Particles from "react-particles-js";
+import AboutMe from "../components/aboutMe";
+import Projects from "./projects";
+import styled from "styled-components";
 
 const particlesOptions = {
   particles: {
@@ -30,7 +30,7 @@ const particlesOptions = {
       out_mode: "out",
     },
   },
-}
+};
 
 const MainSection = styled.section`
   position: relative;
@@ -44,14 +44,14 @@ const MainSection = styled.section`
     bottom: 0;
     left: 0;
   }
-`
+`;
 
 const MainContent = () => (
   <MainSection>
-    <Particles params={particlesOptions} className="particles" />
+    <Particles params={particlesOptions} className='particles' />
     <AboutMe />
     <Projects />
   </MainSection>
-)
+);
 
-export default MainContent
+export default MainContent;

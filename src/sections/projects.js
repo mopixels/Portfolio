@@ -1,14 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
-import Project from "./Project"
-import { mediaQueries } from "./utils/mediaQueries"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Project from "../components/Project";
+import { mediaQueries } from "../components/utils/mediaQueries";
 
 const ProjectsStyled = styled.div`
   padding: 0 10rem 40rem 10rem;
   ${mediaQueries("sm")`
     padding: 0 5rem 35rem 5rem;
-  `};
+  `}
   h2 {
     color: white;
     text-align: center;
@@ -23,17 +23,18 @@ const ProjectsStyled = styled.div`
 
     ${mediaQueries("md")`
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 4.8rem 0;
-  `};
+  `}
   }
-`
+`;
 
 const Projects = () => {
   const { allFile: items } = useStaticQuery(graphql`
     query {
       allFile(
         filter: { sourceInstanceName: { eq: "data" }, extension: { eq: "md" } }
+        sort: { order: DESC, fields: birthtime }
       ) {
         edges {
           node {
@@ -67,11 +68,11 @@ const Projects = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <ProjectsStyled>
-      <h2 id="projects">Projects</h2>
-      <div className="projectsContainer">
+      <h2 id='projects'>Projects</h2>
+      <div className='projectsContainer'>
         {items.edges.map(item => (
           <Project
             key={item.node.id}
@@ -80,7 +81,7 @@ const Projects = () => {
         ))}
       </div>
     </ProjectsStyled>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

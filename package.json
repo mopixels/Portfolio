@@ -26,9 +26,6 @@
     "react-particles-js": "^3.3.0",
     "styled-components": "^5.1.1"
   },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
   "keywords": [
     "gatsby"
   ],
@@ -36,7 +33,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

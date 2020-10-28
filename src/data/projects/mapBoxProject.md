@@ -1,7 +1,7 @@
 ---
 title: "Mapbox"
 type: "Website"
-text: "Distance calculator"
+text: "Distance calculator made with mapbox"
 usedTools: "React - Redux - Mapbox - React-map-gl"
 link: "https://mopixels.github.io/distance-calculator_react-mapbox-gl/"
 source: "https://github.com/mopixels/distance-calculator_react-mapbox-gl"

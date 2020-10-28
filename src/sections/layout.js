@@ -1,11 +1,11 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
-import Eurostile from "../fonts/eurostile.woff"
-import Header from "./header"
-import Footer from "./footer"
-import { mediaQueries } from "./utils/mediaQueries"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import { createGlobalStyle } from "styled-components";
+import Eurostile from "../data/fonts/eurostile.woff";
+import Header from "./header";
+import Footer from "./footer";
+import { mediaQueries } from "../components/utils/mediaQueries";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.6;
   }
-`
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -63,11 +63,11 @@ const Layout = ({ children }) => {
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

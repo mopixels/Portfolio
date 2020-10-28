@@ -1,13 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Modal from "react-modal"
-import Img from "gatsby-image"
-import { FaChevronRight, FaGithub, FaTimes } from "react-icons/fa"
-import styled from "styled-components"
-import Button from "./utils/Button"
-import { mediaQueries } from "./utils/mediaQueries"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Modal from "react-modal";
+import Img from "gatsby-image";
+import { FaChevronRight, FaGithub, FaTimes } from "react-icons/fa";
+import styled from "styled-components";
+import Button from "./utils/Button";
+import { mediaQueries } from "./utils/mediaQueries";
 
-const customStyles = {
+const customModalStyle = {
   content: {
     border: "none",
     background: "transparent",
@@ -26,7 +26,7 @@ const customStyles = {
     backgroundColor: "rgba(255, 255, 255, 0.9)",
     zIndex: 2,
   },
-}
+};
 
 const StyledContent = styled.div`
   display: flex;
@@ -150,12 +150,12 @@ const StyledContent = styled.div`
       }
     }
   }
-`
+`;
 
-Modal.setAppElement("#___gatsby")
+Modal.setAppElement("#___gatsby");
 
 function ProjectModal({ portfolio }) {
-  const project = portfolio.frontmatter
+  const project = portfolio.frontmatter;
   const data = useStaticQuery(graphql`
     query {
       laptopImage: file(relativePath: { eq: "images/laptop.png" }) {
@@ -173,24 +173,24 @@ function ProjectModal({ portfolio }) {
         }
       }
     }
-  `)
+  `);
 
-  var subtitle
-  const [modalIsOpen, setIsOpen] = React.useState(false)
+  var subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
-    setIsOpen(true)
+    setIsOpen(true);
   }
 
   function afterOpenModal() {
-    document.documentElement.style.overflow = "hidden"
-    document.body.scroll = "no"
-    subtitle.style.color = "#000"
+    document.documentElement.style.overflow = "hidden";
+    document.body.scroll = "no";
+    subtitle.style.color = "#000";
   }
 
   function closeModal() {
-    document.documentElement.style.overflow = "visible"
-    document.body.scroll = "yes"
-    setIsOpen(false)
+    document.documentElement.style.overflow = "visible";
+    document.body.scroll = "yes";
+    setIsOpen(false);
   }
 
   return (
@@ -203,30 +203,30 @@ function ProjectModal({ portfolio }) {
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyles}
+        style={customModalStyle}
         contentLabel={project.title}
       >
         <StyledContent>
-          <div className="closeButton">
+          <div className='closeButton'>
             <FaTimes size={24} onClick={closeModal} />
           </div>
           {project.type === "App" ? (
-            <div className="imageContainer">
+            <div className='imageContainer'>
               <Img
                 fluid={data.phoneImage.childImageSharp.fluid}
-                className="phoneImage"
+                className='phoneImage'
               />
               <Img
                 fluid={project.imageSecond.childImageSharp.fluid}
-                className="appImage"
+                className='appImage'
                 style={{ position: "absolute" }}
               />
             </div>
           ) : (
-            <div className="imageContainer">
+            <div className='imageContainer'>
               <Img
                 fluid={data.laptopImage.childImageSharp.fluid}
-                className="laptopImage"
+                className='laptopImage'
               />
               <Img
                 fluid={
@@ -234,41 +234,41 @@ function ProjectModal({ portfolio }) {
                     ? project.image.childImageSharp.fluid
                     : project.imageSecond.childImageSharp.fluid
                 }
-                className="websiteImage"
+                className='websiteImage'
                 style={{ position: "absolute" }}
               />
             </div>
           )}
 
-          <div className="descriptionContainer">
+          <div className='descriptionContainer'>
             <h2 ref={_subtitle => (subtitle = _subtitle)}>{project.title}</h2>
             <p
-              className="descriptionText"
+              className='descriptionText'
               dangerouslySetInnerHTML={{ __html: portfolio.html }}
             />
-            <div className="toolsContainer">
+            <div className='toolsContainer'>
               <h3>DEVELOPMENT TOOLS</h3>
-              <p className="toolsList">{project.usedTools}</p>
+              <p className='toolsList'>{project.usedTools}</p>
             </div>
-            <div className="linkButtons">
-              <Button className="button">
+            <div className='linkButtons'>
+              <Button className='button'>
                 <a
                   href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   {project.type === "Website"
                     ? "Visit website"
                     : "Open Google Play"}
                 </a>
               </Button>
-              <Button className="button">
+              <Button className='button'>
                 <a
                   href={project.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
-                  <FaGithub size={20} className="sourceIcon" />
+                  <FaGithub size={20} className='sourceIcon' />
                   Source
                 </a>
               </Button>
@@ -277,7 +277,7 @@ function ProjectModal({ portfolio }) {
         </StyledContent>
       </Modal>
     </div>
-  )
+  );
 }
 
-export default ProjectModal
+export default ProjectModal;

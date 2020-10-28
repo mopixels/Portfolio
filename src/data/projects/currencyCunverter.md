@@ -1,7 +1,7 @@
 ---
 title: "Currency converter"
 type: "Website"
-text: "MERN stack web application"
+text: "MERN stack currency converter"
 usedTools: "React - NodeJS - Express - MongoDB"
 link: "https://currency-converter-fullstack.herokuapp.com"
 source: "https://github.com/mopixels/currency-converter-MERN"

@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { FaUser, FaFileCode, FaPhone } from "react-icons/fa"
-import { mediaQueries } from "./utils/mediaQueries"
+import React from "react";
+import styled from "styled-components";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FaUser, FaFileCode, FaPhone } from "react-icons/fa";
+import { mediaQueries } from "../components/utils/mediaQueries";
 
 const StyledHeader = styled.header`
   background: #520171;
-`
+`;
 
 const NavStyles = styled.ul`
   display: flex;
@@ -73,43 +73,43 @@ const NavStyles = styled.ul`
       }
     }
   }
-`
+`;
 
 const Header = () => (
   <StyledHeader>
     <NavStyles>
       <li>
-        <AnchorLink to="/#about" stripHash>
-          <span className="start">Ab</span>
-          <span className="middle">o</span>
-          <span className="end">ut</span>
-          <div className="hiddenIcon hiddenIcon-about">
+        <AnchorLink to='/#about' stripHash>
+          <span className='start'>Ab</span>
+          <span className='middle'>o</span>
+          <span className='end'>ut</span>
+          <div className='hiddenIcon hiddenIcon-about'>
             <FaUser />
           </div>
         </AnchorLink>
       </li>
       <li>
-        <AnchorLink to="/#projects" stripHash>
-          <span className="start">Pro</span>
-          <span className="middle">je</span>
-          <span className="end">cts</span>
-          <div className="hiddenIcon hiddenIcon-projects">
+        <AnchorLink to='/#projects' stripHash>
+          <span className='start'>Pro</span>
+          <span className='middle'>je</span>
+          <span className='end'>cts</span>
+          <div className='hiddenIcon hiddenIcon-projects'>
             <FaFileCode />
           </div>
         </AnchorLink>
       </li>
       <li>
-        <AnchorLink to="/#contact" stripHash>
-          <span className="start">Con</span>
-          <span className="middle">ta</span>
-          <span className="end">ct</span>
-          <div className="hiddenIcon hiddenIcon-contact">
+        <AnchorLink to='/#contact' stripHash>
+          <span className='start'>Con</span>
+          <span className='middle'>ta</span>
+          <span className='end'>ct</span>
+          <div className='hiddenIcon hiddenIcon-contact'>
             <FaPhone />
           </div>
         </AnchorLink>
       </li>
     </NavStyles>
   </StyledHeader>
-)
+);
 
-export default Header
+export default Header;

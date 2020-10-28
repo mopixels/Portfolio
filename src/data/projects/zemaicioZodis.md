@@ -1,7 +1,7 @@
 ---
 title: "Žemaičio žodis"
 type: "App"
-text: "Android app built with React Native and Redux"
+text: "Android app built with React Native"
 usedTools: "React Native - Hooks - EXPO - Redux"
 link: "https://play.google.com/store/apps/details?id=com.mopixels.zemaiciozodis"
 source: "https://github.com/mopixels/Zemaicio-zodis"

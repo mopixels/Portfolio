@@ -1,12 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-import { SiGatsby } from "react-icons/si"
+import React from "react";
+import styled from "styled-components";
+import { SiGatsby } from "react-icons/si";
 import {
   FaLinkedin,
   FaGithubSquare,
   FaInstagramSquare,
   FaEnvelopeSquare,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -76,69 +76,69 @@ const StyledFooter = styled.footer`
       }
     }
   }
-`
+`;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <div className="inviteText" id="contact">
+      <div className='inviteText' id='contact'>
         <h3>Get in touch</h3>
         <p>Say Hi or find me at:</p>
       </div>
-      <div className="emailContainer">
+      <div className='emailContainer'>
         <p>mr.modestasrimkus@gmail.com</p>
       </div>
-      <div className="socialMedia">
+      <div className='socialMedia'>
         <ul>
           <li>
             <a
-              href="https://www.linkedin.com/in/modestas-rimkus/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://www.linkedin.com/in/modestas-rimkus/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <FaLinkedin size={42} className="socialIcon" />
+              <FaLinkedin size={42} className='socialIcon' />
             </a>
           </li>
           <li>
             <a
-              href="https://github.com/mopixels"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://github.com/mopixels'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <FaGithubSquare size={42} className="socialIcon" />
+              <FaGithubSquare size={42} className='socialIcon' />
             </a>
           </li>
           <li>
             <a
-              href="https://www.instagram.com/mo.pixels/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href='https://www.instagram.com/mo.pixels/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
-              <FaInstagramSquare size={42} className="socialIcon" />
+              <FaInstagramSquare size={42} className='socialIcon' />
             </a>
           </li>
           <li>
-            <a href="mailto: mr.modestasrimkus@gmail.com">
-              <FaEnvelopeSquare size={42} className="socialIcon" />
+            <a href='mailto: mr.modestasrimkus@gmail.com'>
+              <FaEnvelopeSquare size={42} className='socialIcon' />
             </a>
           </li>
         </ul>
       </div>
-      <div className="copyrights">
+      <div className='copyrights'>
         <span>Handmade by Modestas Rimkus © {new Date().getFullYear()}</span>
-        <div className="gatsby">
+        <div className='gatsby'>
           <span>Built with</span>
           <a
-            href="https://www.gatsbyjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.gatsbyjs.org'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <SiGatsby size={24} color="white" />
+            <SiGatsby size={24} color='white' />
           </a>
         </div>
       </div>
     </StyledFooter>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
