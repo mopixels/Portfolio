@@ -11,8 +11,9 @@ const NotFoundPage = () => {
     align-items: center;
     justify-content: center;
     height: 75vh;
+    overflow: hidden;
     .yoda404 {
-      width: 50rem;
+      width: 40rem;
     }
   `;
 
